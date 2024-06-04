@@ -1,7 +1,7 @@
 import pymysql
 
 class Database:
-    def __init__(self):
+    def __init__(self, testa):
         self.connection = pymysql.connect(
             host = 'sql863.main-hosting.eu',#host o ip de la base datos
             user = 'u484426513_apireact',#usuario de la base datos

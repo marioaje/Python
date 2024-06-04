@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Google Maps Example</title>
+    <style>
+        /* Establece el tamaño del mapa */
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Div para mostrar el mapa -->
+    <div id="map"></div>
+
+    <script>
+        // Función para inicializar y mostrar el mapa
+        function initMap() {
+            // Coordenadas del centro del mapa
+            var myLatLng = {lat: 40.712776, lng: -74.005974}; // Por ejemplo, Nueva York
+
+            // Opciones del mapa
+            var mapOptions = {
+                center: myLatLng,
+                zoom: 12
+            };
+
+            // Crea un nuevo mapa en el elemento con id "map"
+            var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+            // Crea un marcador en el centro del mapa
+            var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                title: 'Mi ubicación'
+            });
+        }
+    </script>
+
+    <!-- Incluye la API de Google Maps con tu clave de API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhsygdpdyvFfSOAtQXTVNxenVtrXlmCXk&callback=initMap" async defer></script>
+</body>
+</html>
